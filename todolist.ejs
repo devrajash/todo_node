@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+    <title>Todo List</title>
+  </head>
+
+  <body>
+    <div class="box" id='heading'>
+      <h1>Today</h1>
+    </div>
+    <div class="box">
+      <% for(let i=0;i<z.length;i++){ %>
+      <form action="/delete" method="post">
+      <div class="item">
+          <input type="checkbox" name="checkbox" value="<%= z[i].items %>" onChange="this.form.submit()">
+          <p><%= z[i].items %></p>
+      </div>
+      </form>
+      <% } %>
+
+
+      <form class="item" action="/" method="post">
+        <input autocomplete="off" type="text" placeholder='New Item' name="input" value="">
+        <button type="submit" name="button">+</button>
+     </form>
+    </div>
+    <footer>Copyright 2020 @ Devraj Ash</footer>
+  </body>
+</html>
