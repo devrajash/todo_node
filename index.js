@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('public'))
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv:/', {useNewUrlParser: true,useUnifiedTopology: true});
+mongoose.connect('<put your database url here>', {useNewUrlParser: true,useUnifiedTopology: true});
 
 
 const todoschema = new mongoose.Schema({
